@@ -6,7 +6,7 @@
          transform: translateY(-50%);
          width:50%;
          max-height:90%;
-
+          overflow: auto;;
 
     }
     h1{
@@ -48,7 +48,7 @@
         height:auto;
         animation: rotateIn 1s linear both;
         animation-delay: 1.4s;
-
+       overflow: auto;
 
         }
         
