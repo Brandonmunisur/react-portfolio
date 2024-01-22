@@ -5,6 +5,11 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect } from 'react'
 import './index.scss'
+import Project from '../projects/project.js'
+import snakeGameImage from '../../assets/images/snake-game.png'
+import secondProjectImage from '../../assets/images/pong-game.png'
+// Correct import statement
+
 // import Logo from './logo'
 
 const Home = () => {
@@ -34,7 +39,26 @@ const Home = () => {
 
     return () => clearTimeout(idTimeOut)
   }, [])
-
+  const projectsData = [
+    // Add your project data here
+    {
+      name: 'snake-game',
+      description: 'Description of Project 1.',
+      technologies: 'JavaScript, CSS, HTML',
+      githubLink: 'https://github.com/Brandonmunisur/snake-game-final',
+      demoLink: 'https://brandonmunisur.github.io/snake-game-final/',
+      image: snakeGameImage,
+    },
+    {
+      name: 'pong-game-program',
+      description: 'Description of the second project.',
+      technologies: 'JavaScript, CSS, HTML',
+      githubLink: 'https://github.com/Brandonmunisur/pong-game-program',
+      demoLink: 'https://brandonmunisur.github.io/pong-game-program/',
+      image: secondProjectImage,
+    },
+    // Add more projects as needed
+  ]
   return (
     <>
       <div className="container home-page">
@@ -66,8 +90,14 @@ const Home = () => {
             CONTACT ME
           </Link>
         </div>
+        {/* Map through projectsData and render Project components */}
+        {projectsData.map((project, index) => {
+          console.log(project)
+          return <Project key={index} {...project} />
+        })}
         {/* <Logo /> */}
       </div>
+
       <Loader type="pacman" />
     </>
   )

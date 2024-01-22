@@ -36,9 +36,10 @@ const About = () => {
             {' '}
             As a passionate and dedicated software developer, I bring a unique
             blend of technical proficiency, creativity, and problem-solving
-            skills to every project. With a solid foundation in programming
-            languages such as JavaScript and proficiency in popular frameworks
-            like React, I am adept at crafting efficient and scalable solutions.
+            skills to every project, With a solid foundation in programming
+            languages such as JavaScript, C++, pyhton and C#. I am proficienct
+            in popular frameworks like React, Angular and .NET I am adept at
+            crafting efficient and scalable solutions.
           </p>
           <p>
             My experience extends to collaborating within agile teams, where
