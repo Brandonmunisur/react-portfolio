@@ -14,6 +14,7 @@ import {
 const Contact = () => {
   const [LetterCLass, setLetterCLass] = useState('text-animate')
   const refForm = useRef()
+
   function LocationMarker() {
     const [position, setPosition] = useState(null)
     const map = useMapEvents({
@@ -32,6 +33,7 @@ const Contact = () => {
       </Marker>
     )
   }
+
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setLetterCLass('text-animate-hover')
@@ -40,6 +42,7 @@ const Contact = () => {
     // Clear the timeout on component unmount
     return () => clearTimeout(timeoutId)
   }, [])
+
   const sendEmail = (e) => {
     e.preventDefault()
     emailjs
@@ -59,6 +62,7 @@ const Contact = () => {
         }
       )
   }
+
   return (
     <>
       <div className="container contact-page">
@@ -72,19 +76,24 @@ const Contact = () => {
           </h1>
           <p>
             I am interested in freelance opportunties - especially ambitions or
-            large projects, However, if you have any other requests or
-            questions, don't hestitae to contact me using the form below.
+            large projects. However, if you have any other requests or
+            questions, don't hesitate to contact me using the form below.
           </p>
           <div className="contact-form">
             <form ref={refForm} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
-                  <input type="text" name="name" placeholder="Name" required />
+                  <input
+                    type="text"
+                    name="from_name"
+                    placeholder="Name"
+                    required
+                  />
                 </li>
                 <li className="half">
                   <input
                     type="text"
-                    name="email"
+                    name="from_email"
                     placeholder="Email"
                     required
                   />
@@ -126,7 +135,6 @@ const Contact = () => {
             />
             <LocationMarker />
           </MapContainer>
-          , )
         </div>
       </div>
       <Loader type="pacman" />
