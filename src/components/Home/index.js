@@ -90,6 +90,7 @@ const Home = () => {
             CONTACT ME
           </Link>
         </div>
+
         {/* Map through projectsData and render Project components */}
         {projectsData.map((project, index) => {
           console.log(project)
