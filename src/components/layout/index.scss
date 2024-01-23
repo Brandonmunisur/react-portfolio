@@ -62,7 +62,7 @@
             left: 10px;
 
            &::before {
-            content: '<h1>';
+            // content: '<h1>';
             font-family: 'coolvertica';
             font-size: 20px;
             position: absolute;
@@ -73,7 +73,7 @@
 
            } 
            &::after {
-            content: '<h1>';
+            // content: '<h1>';
             font-family: 'playful display';
             font-size: 20px;
             position: absolute;
