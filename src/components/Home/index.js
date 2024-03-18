@@ -6,8 +6,10 @@ import AnimatedLetters from '../AnimatedLetters'
 import { useEffect } from 'react'
 import './index.scss'
 import Project from '../projects/project.js'
-import snakeGameImage from '../../assets/images/snake-game.png'
+// import snakeGameImage from '../../assets/images/snake-game.png'
 import secondProjectImage from '../../assets/images/pong-game.png'
+import DisneyPlusImage from '../../assets/images/disney+clone.png'
+import UbercloneImage from '../../assets/images/IMG_5717.PNG'
 // Correct import statement
 
 // import Logo from './logo'
@@ -16,10 +18,16 @@ const Home = () => {
   const [LetterCLass, setLetterCLass] = useState('text-animate')
   const nameArray = ['r', 'a', 'n', 'd', 'o', 'n']
   const jobArray = [
-    'w',
+    'S',
+    'o',
+    'f',
+    't',
+    'w ',
+    'a',
+    'r',
     'e',
-    'b',
     ' ',
+
     'd',
     'e',
     'v',
@@ -42,12 +50,21 @@ const Home = () => {
   const projectsData = [
     // Add your project data here
     {
-      name: 'snake-game',
+      name: 'Disney+ Clone',
       description: 'Description of Project 1.',
-      technologies: 'JavaScript, CSS, HTML',
-      githubLink: 'https://github.com/Brandonmunisur/snake-game-final',
-      demoLink: 'https://brandonmunisur.github.io/snake-game-final/',
-      image: snakeGameImage,
+      technologies: 'React, Redux, Firebase, Styled-Components',
+      githubLink: 'https://github.com/Brandonmunisur/disney-clone',
+      demoLink: 'https://disneyplus-clone-84335.firebaseapp.com/',
+      image: DisneyPlusImage,
+    },
+    {
+      name: 'Uber-Clone',
+      description: 'Description of Project 1.',
+      technologies:
+        'React Native,Navigation, Redux, Tailwind CSS & Google Autocomplete ',
+      githubLink: 'https://github.com/Brandonmunisur/uber-clone',
+      // demoLink: 'https://brandonmunisur.github.io/snake-game-final/',
+      image: UbercloneImage,
     },
     {
       name: 'pong-game-program',
@@ -90,13 +107,18 @@ const Home = () => {
             CONTACT ME
           </Link>
         </div>
-
-        {/* Map through projectsData and render Project components */}
-        {projectsData.map((project, index) => {
-          console.log(project)
-          return <Project key={index} {...project} />
-        })}
-        {/* <Logo /> */}
+        {/* Projects Section */}
+        <div className="projects-section">
+          <h3>Projects:</h3> {/* Heading for projects section */}
+          <div className="projects">
+            {/* Map through projectsData and render Project components */}
+            {projectsData.map((project, index) => {
+              console.log(project)
+              return <Project key={index} {...project} />
+            })}
+            {/* <Logo /> */}
+          </div>
+        </div>
       </div>
 
       <Loader type="pacman" />
