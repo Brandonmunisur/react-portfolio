@@ -1,0 +1,74 @@
+// /* Add this to your CSS stylesheet or use inline styles */
+.projects-section {
+  h3{
+      color: black;
+      font-size: 25px;
+      margin:0;
+      font-family: 'times New roman';
+      font-weight: 200;
+      animation: fadeIn 1s 1.8s backwards;
+      // z-index: auto;
+    
+        /* Assuming you want to move the text-zone 20% to the right from the center */
+        position: absolute;
+  left: calc(50% + 19%);
+      
+      
+}
+}
+.project {
+
+  h2{
+    font-style: normal;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #5100ff ;
+  }
+  
+  position: relative;
+  text-align: center;
+ top: 5%;
+   left:60%; /* Adjust the value to move the project page up or down */
+  margin-right: 75%;  /* Adjust the value to move the project page left or right */
+  border: 1px solid #ddd;
+    /* Adjust the padding as needed */
+  margin-bottom: 20px;
+  animation: fadeIn 1s 1.8s backwards;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.04); /* Increase size on hover */
+    background-color: #ddd; 
+  }
+
+  p{
+    font-size: 13px;
+  }
+.project-image {
+  max-width: 125px; /* Adjust the maximum width as needed */
+  max-height: 125px;
+  // margin-bottom: 10px;
+}
+
+
+}
+/* Your existing .links styles */
+.links {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column; /* Align links vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text within each link */
+}
+
+/* Additional styling for links if needed */
+.links a {
+  margin-bottom: 10px; /* Optional spacing between links */
+  color: #007bff;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: purple;
+  text-decoration: underline;
+}
+
