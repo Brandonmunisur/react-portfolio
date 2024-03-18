@@ -22,11 +22,11 @@ const Project = ({
     </p>
     <div className="links">
       <a href={githubLink} target="_blank" rel="noopener noreferrer">
-        GitHub Repository
+        GitHub Repository link
       </a>
       {demoLink && (
         <a href={demoLink} target="_blank" rel="noopener noreferrer">
-          Live Demo
+          Live Demo Link
         </a>
       )}
     </div>
