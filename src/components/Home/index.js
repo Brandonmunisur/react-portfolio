@@ -8,6 +8,7 @@ import './index.scss'
 import Project from '../projects/project.js'
 import snakeGameImage from '../../assets/images/snake-game.png'
 import secondProjectImage from '../../assets/images/pong-game.png'
+import disneyImage from '../../assets/images/disney.png'
 // Correct import statement
 
 // import Logo from './logo'
@@ -42,6 +43,14 @@ const Home = () => {
   const projectsData = [
     // Add your project data here
     {
+      name: 'Disney-plus clone',
+      description: 'Description of Project 1.',
+      technologies: 'React, Firebase, redux',
+      githubLink: 'https://github.com/Brandonmunisur/disney-clone',
+      demoLink: 'https://disneyplus-clone-84335.firebaseapp.com/',
+      image: disneyImage,
+    },
+    {
       name: 'snake-game',
       description: 'Description of Project 1.',
       technologies: 'JavaScript, CSS, HTML',
@@ -57,6 +66,7 @@ const Home = () => {
       demoLink: 'https://brandonmunisur.github.io/pong-game-program/',
       image: secondProjectImage,
     },
+
     // Add more projects as needed
   ]
   return (
