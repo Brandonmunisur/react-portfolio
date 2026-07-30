@@ -6,6 +6,8 @@ import AnimatedLetters from '../AnimatedLetters'
 import { useEffect } from 'react'
 import './index.scss'
 import Project from '../projects/project.js'
+
+import applicationTrackerImage from '../../assets/images/application-tracker.png'
 import snakeGameImage from '../../assets/images/snake-game.png'
 import secondProjectImage from '../../assets/images/pong-game.png'
 import disneyImage from '../../assets/images/disney.png'
@@ -40,35 +42,26 @@ const Home = () => {
 
     return () => clearTimeout(idTimeOut)
   }, [])
-  const projectsData = [
-    // Add your project data here
-    {
-      name: 'Disney-plus clone',
-      description: 'Description of Project 1.',
-      technologies: 'React, Firebase, redux',
-      githubLink: 'https://github.com/Brandonmunisur/disney-clone',
-      demoLink: 'https://disneyplus-clone-84335.firebaseapp.com/',
-      image: disneyImage,
-    },
-    {
-      name: 'snake-game',
-      description: 'Description of Project 1.',
-      technologies: 'JavaScript, CSS, HTML',
-      githubLink: 'https://github.com/Brandonmunisur/snake-game-final',
-      demoLink: 'https://brandonmunisur.github.io/snake-game-final/',
-      image: snakeGameImage,
-    },
-    {
-      name: 'pong-game-program',
-      description: 'Description of the second project.',
-      technologies: 'JavaScript, CSS, HTML',
-      githubLink: 'https://github.com/Brandonmunisur/pong-game-program',
-      demoLink: 'https://brandonmunisur.github.io/pong-game-program/',
-      image: secondProjectImage,
-    },
-
-    // Add more projects as needed
-  ]
+const projectsData = [
+  {
+    name: 'Application Tracker',
+    description:
+      'A React job application tracker for managing applications, interview stages, follow-up dates and recruiter information.',
+    technologies: 'React, JavaScript, Vite, CSS, Local Storage',
+    githubLink: 'https://github.com/Brandonmunisur/careerboard-react',
+    demoLink: 'https://brandonmunisur.github.io/careerboard-react/',
+    image: applicationTrackerImage,
+  },
+  {
+    name: 'Disney+ Clone',
+    description:
+      'A Disney+ inspired streaming interface built with React, Firebase and Redux.',
+    technologies: 'React, Firebase, Redux',
+    githubLink: 'https://github.com/Brandonmunisur/disney-clone',
+    demoLink: 'https://disneyplus-clone-84335.firebaseapp.com/',
+    image: disneyImage,
+  },
+]
   return (
     <>
       <div className="container home-page">
